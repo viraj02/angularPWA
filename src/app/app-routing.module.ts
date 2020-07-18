@@ -1,8 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { HomeComponent } from './modules/home/home.component';
 
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: 'todo-list', component: HomeComponent
+  },
+  {
+    path: '', redirectTo: 'todo-list', pathMatch: 'full'
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
