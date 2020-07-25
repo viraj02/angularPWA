@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>AngularPWA</title>
@@ -9,9 +10,45 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="manifest" href="manifest.webmanifest">
   <meta name="theme-color" content="#1976d2">
+
+  <style>
+    .splash {
+      opacity: 1;
+      z-index: 1;
+      visibility: visible;
+      transition: opacity 1.4s ease-in-out, visibility 1.4s;
+      position: fixed;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background: #1e85c8;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    app-root:not(:empty)+.splash {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .splash_image {
+      width: 100%;
+      max-width: 200px;
+    }
+  </style>
+
 </head>
+
 <body>
-  <app-root></app-root>
+  <app-root>
+    <div class="splash">
+      <img class="splash_image" src="assets/images/logo.png" alt="" />
+    </div>
+  </app-root>
   <noscript>Please enable JavaScript to continue using this application.</noscript>
 </body>
+
 </html>
