@@ -1,3 +1,10 @@
-<p>home works!</p>
 
-<app-prime-order-list></app-prime-order-list>
+<div class="container">
+    <div class="d-flex flex-column bd-highlight mb-3 todolist">
+        <app-prime-order-list></app-prime-order-list>
+    </div>
+</div>
+
+<div>
+    <button *ngIf="showButton" (click)="addToHomeScreen()">Add to home screen</button>
+</div>
