@@ -6,8 +6,7 @@ import { OrderListModule } from 'primeng/orderlist';
 
 
 @NgModule({
-  declarations: [OrderListComponent,
-  ],
+  declarations: [OrderListComponent,   ],
   imports: [
     CommonModule,
     OrderListModule
