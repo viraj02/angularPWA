@@ -9,6 +9,9 @@ const routes: Routes = [
   },
   {
     path: '', redirectTo: 'todo-list', pathMatch: 'full'
+  },
+  {
+    path: '**', redirectTo: 'todo-list', pathMatch: 'full'
   }
 ];
 
