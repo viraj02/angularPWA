@@ -1,6 +1,6 @@
 
 <div class="wrapper">
-    <button class="button" (click)="show()"> Add your Todo</button>
+    <button class="button" (click)="addTodo()" title="Add your todo"> Add Todo</button>
 </div>
 <p-orderList [value]="cars" [listStyle]="{'height':'400px'}" header="Todo List" filter="filter" filterBy="brand"
     filterPlaceholder="Filter Todo List" class="orderlist">

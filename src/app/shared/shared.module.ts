@@ -6,12 +6,13 @@ import { ToolbarModule } from 'primeng/toolbar';
 import { DynamicDialogModule } from 'primeng/dynamicdialog';
 import { DialogComponent } from './dialog/dialog.component';
 import { DialogContentComponent } from './dialog-content/dialog-content.component';
+import { TableComponent } from './table/table.component';
 
 
 
 
 @NgModule({
-  declarations: [OrderListComponent, DialogComponent, DialogContentComponent,
+  declarations: [OrderListComponent, DialogComponent, DialogContentComponent, TableComponent,
   ],
   imports: [
     CommonModule,
@@ -21,10 +22,8 @@ import { DialogContentComponent } from './dialog-content/dialog-content.componen
   ],
   exports: [
     OrderListComponent,
-    DialogComponent
-  ],
-  entryComponents: [
-    DialogContentComponent,
+    DialogComponent,
+    TableComponent,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA,
   ]

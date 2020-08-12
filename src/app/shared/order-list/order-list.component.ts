@@ -1,19 +1,17 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { DialogService } from 'primeng/api';
 import { DialogContentComponent } from '../dialog-content/dialog-content.component';
 
 @Component({
   selector: 'app-prime-order-list',
   templateUrl: './order-list.component.html',
   styleUrls: ['./order-list.component.css'],
-  providers: [DialogService],
   encapsulation: ViewEncapsulation.None
 })
 export class OrderListComponent implements OnInit {
 
   cars: any[];
 
-  constructor(public dialogService: DialogService, ) { }
+  constructor() { }
 
   ngOnInit() {
     this.cars = [
@@ -47,14 +45,11 @@ export class OrderListComponent implements OnInit {
       { brand: 'Jaguar', year: 2013, color: 'Orange', vin: 'greg34' },
       { brand: 'Ford', year: 2000, color: 'Black', vin: 'h54hw5' },
       { brand: 'Fiat', year: 2013, color: 'Red', vin: '245t2s' }
-    ]
+    ];
   }
 
-  show() {
-    const ref = this.dialogService.open(DialogContentComponent, {
-        header: 'Choose a Car',
-        width: '70%'
-    });
-}
+  addTodo() {
+
+  }
 
 }
