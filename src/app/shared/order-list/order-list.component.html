@@ -1,15 +1,14 @@
+
+<div class="wrapper">
+    <button class="button" (click)="show()"> Add your Todo</button>
+</div>
 <p-orderList [value]="cars" [listStyle]="{'height':'400px'}" header="Todo List" filter="filter" filterBy="brand"
-    filterPlaceholder="Filter Todo List" dragdrop="true" class="orderlist">
+    filterPlaceholder="Filter Todo List" class="orderlist">
 
-
-
-
-    <ng-template let-car pTemplate="item">
+    <ng-template let-list pTemplate="item">
 
         <div class="ui-helper-clearfix">
-            <!-- <img src="assets/showcase/images/demo/car/{{car.brand}}.png" style="display:inline-block;margin:2px 0 2px 2px" width="48"> -->
-            <!-- <div><input type="checkbox" name="" id=""></div> -->
-            <div>{{car.brand}} - {{car.year}} - {{car.color}}</div>
+            <div>{{list.brand}} - {{list.year}} - {{list.color}}</div>
         </div>
     </ng-template>
 </p-orderList>
