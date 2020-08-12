@@ -7,14 +7,14 @@
     <div>
         <a routerLink="/home">PWA Practice</a>
     </div>
-    <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
+    <div fxFlex fxLayout fxLayoutAlign="end">
         <ul fxLayout fxLayoutGap="15px" class="navigation-items">
-            <li>
-                <a routerLink="/owner">Owner Actions</a>
+            <li title="Sign In">
+                <a href="javascript:void(0);" routerLink="/owner"><i class="pi pi-sign-in"></i></a>
             </li>
-            <li>
-                <a routerLink="/account">Account Actions</a>
-            </li>
+            <!-- <li title="Sign Out">
+                <a href="javascript:void(0);" routerLink="/owner"><i class="pi pi-sign-out"></i></a>
+            </li> -->
         </ul>
     </div>
 </mat-toolbar>
